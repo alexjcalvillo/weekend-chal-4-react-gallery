@@ -11,6 +11,18 @@ const galleryItems = [
     description: 'My face.',
     likes: 0,
   },
+  {
+    id: 3,
+    path: 'images/me.jpg',
+    description: 'My face.',
+    likes: 0,
+  },
+  {
+    id: 4,
+    path: 'images/me.jpg',
+    description: 'My face.',
+    likes: 0,
+  },
 ];
 
 module.exports = galleryItems;

@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import styles from '../GalleryItem/GalleryItem.module.css';
 
-class GalleryList extends Component {
+class GalleryItem extends Component {
   render() {
-    const { item } = this.props;
-    return <div>Left off here!</div>;
+    const { item, index } = this.props;
+    return (
+      <div className={styles.item} key={index}>
+        <img src={item.path} alt={item.description}></img>
+        <h4>{item.likes}</h4>
+        <button>Like!</button>
+      </div>
+    );
   }
 }
 

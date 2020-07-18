@@ -1,8 +1,6 @@
-.item {
-  border: 1px solid black;
-  box-shadow: 2px 2px 4px;
-  display: inline-block;
-  width: 150px;
-  padding: 20px;
-  margin: 100px;
+.field {
+  background-color: cyan;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin: 15px;
 }
