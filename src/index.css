@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+p {
+  word-wrap: break-word;
+  color: #ffffff;
+  font-size: larger;
+}
+
 img {
   width: 250px;
   height: 250px;

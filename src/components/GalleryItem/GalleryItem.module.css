@@ -1,9 +1,38 @@
 .item {
   border: 1px solid black;
-  box-shadow: 2px 2px 4px;
+  box-shadow: 4px 4px 4px;
   display: inline-block;
+  height: 400px;
   width: 300px;
+  overflow-y: hidden;
   padding: 20px;
   margin: 50px;
   background-color: antiquewhite;
+  position: relative;
+}
+
+.noblur {
+  margin: 0;
+  padding: 0;
+}
+
+.blur {
+  filter: blur(5px) opacity(0.4);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.overlayText {
+  position: absolute;
+  height: 254px;
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  top: 18px;
+  z-index: 1;
+  margin: auto;
 }

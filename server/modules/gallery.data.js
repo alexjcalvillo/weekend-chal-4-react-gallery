@@ -14,7 +14,8 @@ const galleryItems = [
   {
     id: 3,
     path: 'images/me.jpg',
-    description: 'My face.',
+    description:
+      'My face. Photo of a goat taken at Glacier National Park. Photo of a goat taken at Glacier National Park.Photo of a goat taken at Glacier National Park. Photo of a goat taken at Glacier National Park.',
     likes: 0,
   },
   {
