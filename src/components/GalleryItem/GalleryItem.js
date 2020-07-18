@@ -4,10 +4,6 @@ import styles from '../GalleryItem/GalleryItem.module.css';
 class GalleryItem extends Component {
   state = {
     isClicked: false,
-    likes: {
-      currentLikes: 0,
-    },
-    clickedId: '',
   };
 
   clickImg = () => {
