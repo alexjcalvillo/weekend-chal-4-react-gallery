@@ -4,9 +4,13 @@ import styles from '../GalleryItem/GalleryItem.module.css';
 class GalleryItem extends Component {
   state = {
     isClicked: false,
+    likes: {
+      currentLikes: 0,
+    },
+    clickedId: '',
   };
 
-  clickImg = (event) => {
+  clickImg = () => {
     console.log('in clickImg');
     this.setState(
       {
@@ -18,6 +22,12 @@ class GalleryItem extends Component {
     );
   };
 
+  addLike = (event) => {
+    let id = this.props.item.id;
+    console.log('adding likes', id);
+    this.props.update(id);
+  };
+
   render() {
     const { item, index } = this.props;
     let photoDisplay;
@@ -26,7 +36,7 @@ class GalleryItem extends Component {
       photoDisplay = (
         <div onClick={this.clickImg}>
           <div className={styles.overlayText}>
-            <p>{item.description}</p>
+            <p className={styles.cursor}>{item.description}</p>
           </div>
           <img className={styles.blur} src={item.path} alt={item.description} />
         </div>
@@ -48,8 +58,10 @@ class GalleryItem extends Component {
         {photoDisplay}
         <div>
           <hr />
-          <h4>{item.likes}</h4>
-          <button>Like!</button>
+          <h4>Likes: {item.likes}</h4>
+          <button id={this.props.index} onClick={this.addLike}>
+            Like!
+          </button>
         </div>
       </div>
     );

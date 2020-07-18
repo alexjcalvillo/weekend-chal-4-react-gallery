@@ -36,3 +36,7 @@
   z-index: 1;
   margin: auto;
 }
+
+.cursor {
+  cursor: default;
+}
