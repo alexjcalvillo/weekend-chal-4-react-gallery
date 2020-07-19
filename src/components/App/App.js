@@ -40,6 +40,7 @@ class App extends Component {
       data: id,
     })
       .then((response) => {
+        //call get again to retrieve updated DB
         this.getImages();
       })
       .catch((err) => {
@@ -48,6 +49,21 @@ class App extends Component {
   };
 
   //POST new image with Form component
+  postImage = (newImage) => {
+    console.log('this is the image', newImage);
+    Axios({
+      method: 'POST',
+      url: '/gallery',
+      data: newImage,
+    })
+      .then((response) => {
+        console.log('POST', response.data);
+        this.getImages();
+      })
+      .catch((err) => {
+        console.log(`It broke down on the way. ${err}`);
+      });
+  };
 
   render() {
     return (
@@ -57,7 +73,7 @@ class App extends Component {
         </header>
         <br />
         <div>
-          <GalleryForm />
+          <GalleryForm postImage={this.postImage} />
           <GalleryList
             group={this.state.items}
             updateLikes={this.updateLikes}

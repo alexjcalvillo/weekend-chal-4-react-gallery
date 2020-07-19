@@ -7,12 +7,23 @@ class GalleryForm extends Component {
       imageInput: '',
       descriptionInput: '',
     },
-    galleryItem: [],
   };
 
   handleSubmitForm = (event) => {
     event.preventDefault();
     console.log('in submit');
+    const submittedImage = {
+      path: this.state.form.imageInput,
+      description: this.state.form.descriptionInput,
+      likes: 0,
+    };
+    this.props.postImage(submittedImage);
+    this.setState({
+      form: {
+        imageInput: '',
+        descriptionInput: '',
+      },
+    });
   };
 
   handleInputChange(event, keyField) {
@@ -40,6 +51,7 @@ class GalleryForm extends Component {
             }}
             type="text"
             placeholder="add image (/images/imagename.jpg)"
+            value={this.state.form.imageInput}
           />
           <input
             onChange={(event) => {
@@ -47,6 +59,7 @@ class GalleryForm extends Component {
             }}
             type="text"
             placeholder="description of photo"
+            value={this.state.form.descriptionInput}
           />
           <button>Add Photo</button>
         </form>
