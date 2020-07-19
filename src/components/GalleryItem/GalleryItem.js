@@ -4,6 +4,7 @@ import styles from '../GalleryItem/GalleryItem.module.css';
 class GalleryItem extends Component {
   state = {
     isClicked: false,
+    zoomedIn: false,
   };
 
   clickImg = () => {
@@ -22,6 +23,13 @@ class GalleryItem extends Component {
     let id = this.props.item.id;
     console.log('adding likes', id);
     this.props.update(id);
+  };
+
+  zoomIn = () => {
+    console.log('in zoom');
+    this.setState({
+      zoomedIn: !this.state.zoomedIn,
+    });
   };
 
   render() {
@@ -49,8 +57,17 @@ class GalleryItem extends Component {
       );
     }
 
+    let zoomState;
+    if (zoomedIn === true) {
+      <div>
+        <img src={item.path} alt={item.description} />
+      </div>;
+    }
     return (
       <div className={styles.item} key={index}>
+        <button onClick={this.zoomIn} className={styles.zoom}>
+          Zoom
+        </button>
         {photoDisplay}
         <div>
           <hr />
