@@ -1,13 +1,14 @@
 .item {
   border: 1px solid black;
+  border-radius: 6px;
   box-shadow: 4px 4px 4px;
   display: inline-block;
-  height: 400px;
-  width: 300px;
+  height: 700px;
+  width: 550px;
   overflow-y: hidden;
   padding: 20px;
   margin: 50px;
-  background-color: antiquewhite;
+  background-color: #7b7272;
   position: relative;
 }
 
@@ -27,16 +28,19 @@
 
 .overlayText {
   position: absolute;
-  height: 254px;
-  width: 300px;
+  height: 504px;
+  width: 550px;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
-  top: 18px;
+  top: 180px;
   z-index: 1;
   margin: auto;
 }
 
 .cursor {
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: default;
+  margin-left: 50px;
+  width: 450px;
 }

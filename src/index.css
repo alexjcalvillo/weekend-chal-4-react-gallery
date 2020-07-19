@@ -7,11 +7,11 @@ body {
 p {
   word-wrap: break-word;
   color: #ffffff;
-  font-size: larger;
+  font-size: xx-large;
 }
 
 img {
-  width: 250px;
-  height: 250px;
+  width: 425px;
+  height: 500px;
   display: inline-block;
 }
