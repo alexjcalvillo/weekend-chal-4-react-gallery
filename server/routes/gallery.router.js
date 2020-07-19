@@ -38,4 +38,22 @@ router.get('/', (req, res) => {
     });
 }); // END GET Route
 
+// POST route to add image
+router.post('/', (req, res) => {
+  const image = req.body;
+  console.log(req.body);
+  const query = `INSERT INTO gallery ("path", "description", "likes")
+  VALUES ($1, $2, $3)`;
+
+  pool
+    .query(query, [image.path, image.description, image.likes])
+    .then((dbResponse) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log(`Doesn't seem right? ${err}`);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;
