@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   state = {

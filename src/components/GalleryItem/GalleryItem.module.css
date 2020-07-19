@@ -2,8 +2,8 @@
   border-radius: 3px;
   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
   display: inline-block;
-  height: 250px;
-  width: 196px;
+  height: 321px;
+  width: 216px;
   overflow-y: hidden;
   padding: 20px;
   margin: 12px;
@@ -41,4 +41,14 @@
   background-color: rgba(0, 0, 0, 0.1);
   cursor: default;
   width: 196px;
+}
+
+.zoomBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.zoomItem {
 }
