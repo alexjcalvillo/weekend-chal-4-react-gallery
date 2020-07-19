@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../GalleryItem/GalleryItem.module.css';
+import ReactDOM from 'react-dom';
+import Modal from '../Modal/Modal';
 
 class GalleryItem extends Component {
   state = {
@@ -26,7 +28,7 @@ class GalleryItem extends Component {
   };
 
   zoomIn = () => {
-    console.log('in zoom');
+    console.log('in zoom', this.state.zoomedIn);
     this.setState({
       zoomedIn: !this.state.zoomedIn,
     });
@@ -34,6 +36,7 @@ class GalleryItem extends Component {
 
   render() {
     const { item, index } = this.props;
+
     let photoDisplay;
     const imageState = this.state.isClicked;
     if (imageState === true) {
@@ -57,17 +60,13 @@ class GalleryItem extends Component {
       );
     }
 
-    let zoomState;
-    if (zoomedIn === true) {
-      <div>
-        <img src={item.path} alt={item.description} />
-      </div>;
-    }
     return (
       <div className={styles.item} key={index}>
-        <button onClick={this.zoomIn} className={styles.zoom}>
-          Zoom
-        </button>
+        <Modal
+          pic={item.path}
+          description={item.description}
+          className={styles.zoom}
+        />
         {photoDisplay}
         <div>
           <hr />
