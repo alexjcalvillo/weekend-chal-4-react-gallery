@@ -43,12 +43,14 @@ Link to software that is required to install the app (e.g. node).
 
 ## Built With
 
-List technologies and frameworks here
+- React
+- Node
+- Axios
+- Javascript
+- Express
+- Material-UI
 
 ## Acknowledgement
 
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
 
-## Support
-
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)
