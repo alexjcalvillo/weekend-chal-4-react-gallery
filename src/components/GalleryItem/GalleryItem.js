@@ -54,7 +54,7 @@ class GalleryItem extends Component {
         {photoDisplay}
         <div>
           <hr />
-          <h4>{item.likes} people like this.</h4>
+          <p>{item.likes} people like this.</p>
           <button id={this.props.index} onClick={this.addLike}>
             Like!
           </button>

@@ -1,14 +1,13 @@
 .item {
-  border: 1px solid black;
   border-radius: 6px;
-  box-shadow: 4px 4px 4px;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
   display: inline-block;
-  height: 700px;
-  width: 550px;
+  height: 250px;
+  width: 196px;
   overflow-y: hidden;
   padding: 20px;
-  margin: 50px;
-  background-color: #7b7272;
+  margin: 12px;
+  background-color: rgb(243, 245, 250);
   position: relative;
 }
 
@@ -28,12 +27,12 @@
 
 .overlayText {
   position: absolute;
-  height: 504px;
-  width: 550px;
+  height: 180px;
+  width: 196px;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
-  top: 180px;
+  top: 50px;
   z-index: 1;
   margin: auto;
 }
@@ -41,6 +40,5 @@
 .cursor {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: default;
-  margin-left: 50px;
-  width: 450px;
+  width: 196px;
 }

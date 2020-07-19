@@ -6,12 +6,12 @@ body {
 
 p {
   word-wrap: break-word;
-  color: #ffffff;
-  font-size: xx-large;
+  color: black;
+  font-size: large;
 }
 
 img {
-  width: 425px;
-  height: 500px;
+  width: 196px;
+  height: 178px;
   display: inline-block;
 }
