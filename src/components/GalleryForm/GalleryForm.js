@@ -45,15 +45,21 @@ class GalleryForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmitForm}>
+          <label for="imageInput">Image URL:</label>
           <input
+            id="imageInput"
+            className={styles.stretchy}
             onChange={(event) => {
               this.handleInputChange(event, 'imageInput');
             }}
             type="text"
-            placeholder="add image (/images/imagename.jpg)"
+            placeholder="add image"
             value={this.state.form.imageInput}
           />
+          <label for="descriptionInput">Description:</label>
           <input
+            id="descriptionInput"
+            className={styles.stretchy}
             onChange={(event) => {
               this.handleInputChange(event, 'descriptionInput');
             }}

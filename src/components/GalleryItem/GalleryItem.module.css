@@ -42,13 +42,3 @@
   cursor: default;
   width: 196px;
 }
-
-.zoomBtn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2;
-}
-
-.zoomItem {
-}

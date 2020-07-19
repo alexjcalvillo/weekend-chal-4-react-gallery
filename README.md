@@ -38,7 +38,7 @@ Link to software that is required to install the app (e.g. node).
 ## Usage
 
 1. Load up the application and begin exploring!
-2. Listed are gallery items for you to view and find descriptions pertaining to their photo.
+2. Listed are gallery items for you to view and find descriptions pertaining to their photo. Click directly on the photo, or try clicking the zoom button!
 3. If you like the photo, drop a like on it! Your likes will add up with the viewers like you!
 
 ## Built With

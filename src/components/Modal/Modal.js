@@ -56,7 +56,7 @@ export default function SimpleModal(props) {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
+      <button className={styles.zoomBtn} type="button" onClick={handleOpen}>
         Zoom
       </button>
       <Modal
