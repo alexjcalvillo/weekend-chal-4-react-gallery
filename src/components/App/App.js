@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 class App extends Component {
   state = {
@@ -12,13 +13,14 @@ class App extends Component {
     console.log('Ready');
     this.getImages();
   }
-  // Retrieve data from server to display on APP
+  // GET Retrieve data from server to display on APP
   getImages = () => {
     Axios({
       method: 'GET',
       url: '/gallery',
     })
       .then((response) => {
+        // set state to the current array of gallery items
         this.setState({
           ...this.state.items,
           items: response.data,
@@ -29,6 +31,7 @@ class App extends Component {
       });
   };
 
+  // PUT number of likes when individual item is clicked
   updateLikes = (id) => {
     console.log('PUT', id);
     Axios({
@@ -44,6 +47,8 @@ class App extends Component {
       });
   };
 
+  //POST new image with Form component
+
   render() {
     return (
       <div className="App">
@@ -52,6 +57,7 @@ class App extends Component {
         </header>
         <br />
         <div>
+          <GalleryForm />
           <GalleryList
             group={this.state.items}
             updateLikes={this.updateLikes}
