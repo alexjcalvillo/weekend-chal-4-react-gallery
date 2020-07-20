@@ -10,8 +10,6 @@ An interactive gallery display which showcases not only moments from my life (so
 
 The photographs are interactable, displaying short descriptions to give insight on the important moments, and if you like what you see and read, give it a like!
 
-<!-- To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com) -->
-
 ## Screen Shot
 
 ![Screen Shot Overall](public/images/GalleryScreenShot1.png)
@@ -24,7 +22,6 @@ Link to software that is required to install the app (e.g. node).
 - [React.js](https://reactjs.org)
 - [Node.js](https://nodejs.org/en/)
 - [PostgreSQL](https://www.postgresql.org)
--
 
 ## Installation
 
@@ -53,4 +50,3 @@ Link to software that is required to install the app (e.g. node).
 ## Acknowledgement
 
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
-
