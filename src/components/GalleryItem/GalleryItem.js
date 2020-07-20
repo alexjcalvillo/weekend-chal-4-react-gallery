@@ -5,7 +5,6 @@ import Modal from '../Modal/Modal';
 class GalleryItem extends Component {
   state = {
     isClicked: false,
-    zoomedIn: false,
   };
 
   clickImg = () => {
@@ -52,17 +51,6 @@ class GalleryItem extends Component {
         </div>
       );
     }
-    // else {
-    //   photoDisplay = (
-    //     <div onClick={this.clickImg}>
-    //       <img
-    //         className={styles.noblur}
-    //         src={item.path}
-    //         alt={item.description}
-    //       />
-    //     </div>
-    //   );
-    // }
 
     return (
       <div className={styles.item} key={index}>
@@ -75,9 +63,7 @@ class GalleryItem extends Component {
         <div>
           <hr />
           <p>{item.likes} people like this.</p>
-          <button id={this.props.index} onClick={this.addLike}>
-            Like!
-          </button>
+          <button onClick={this.addLike}>Like!</button>
         </div>
       </div>
     );

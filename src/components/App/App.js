@@ -78,7 +78,6 @@ class App extends Component {
             group={this.state.items}
             updateLikes={this.updateLikes}
           />
-          {/* <img src="images/goat_small.jpg" alt="a mountain goat" /> */}
         </div>
       </div>
     );
