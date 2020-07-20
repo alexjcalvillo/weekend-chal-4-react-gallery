@@ -50,6 +50,7 @@ export default function SimpleModal(props) {
         id="simple-modal-description"
         src={props.pic}
         className={styles.zoom}
+        alt={props.description}
       />
     </div>
   );

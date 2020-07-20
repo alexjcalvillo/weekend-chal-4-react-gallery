@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from '../GalleryItem/GalleryItem.module.css';
-import ReactDOM from 'react-dom';
 import Modal from '../Modal/Modal';
 
 class GalleryItem extends Component {
@@ -37,7 +36,11 @@ class GalleryItem extends Component {
   render() {
     const { item, index } = this.props;
 
-    let photoDisplay;
+    let photoDisplay = (
+      <div onClick={this.clickImg}>
+        <img className={styles.noblur} src={item.path} alt={item.description} />
+      </div>
+    );
     const imageState = this.state.isClicked;
     if (imageState === true) {
       photoDisplay = (
@@ -48,17 +51,18 @@ class GalleryItem extends Component {
           <img className={styles.blur} src={item.path} alt={item.description} />
         </div>
       );
-    } else {
-      photoDisplay = (
-        <div onClick={this.clickImg}>
-          <img
-            className={styles.noblur}
-            src={item.path}
-            alt={item.description}
-          />
-        </div>
-      );
     }
+    // else {
+    //   photoDisplay = (
+    //     <div onClick={this.clickImg}>
+    //       <img
+    //         className={styles.noblur}
+    //         src={item.path}
+    //         alt={item.description}
+    //       />
+    //     </div>
+    //   );
+    // }
 
     return (
       <div className={styles.item} key={index}>
